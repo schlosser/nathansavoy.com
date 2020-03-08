@@ -1,9 +1,9 @@
 meta:
   title: "Nathan Savoy"
   description: "Writer, performer, and poet based in NYC. Currently, masters student at NYU studying video games and culture."
-  facebook_image: ""  # /img/facebook.png
-  twitter_image: ""  # /img/twitter.png
-  image: ""  # /img/share.png
+  facebook_image: "/img/nathan.jpg"
+  twitter_image: "/img/nathan.jpg"
+  image: "/img/nathan.jpg"
   twitter_handle: "@PedanticTweed"
   domain: "nathansavoy.com"
   url: "https://nathansavoy.com"
