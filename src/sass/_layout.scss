@@ -14,6 +14,10 @@ body {
     padding: 3rem;
     flex: 1;
     max-width: $content-width;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .sidebar {
@@ -37,6 +41,6 @@ body {
 
 @media screen and (max-width: $phone-landscape-max) {
   body .main {
-    padding: 1.5rem;
+    padding: 0 1.5rem 3rem;
   }
 }
