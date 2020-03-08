@@ -1,0 +1,42 @@
+html, body {
+  background-color: $light-green;
+  color: $black;
+  font-family: $sans;
+  font-size: 16px;
+  font-weight: $regular;
+  line-height: 1.5;
+  position: relative;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: $transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline $transparent;
+  transition: 0.2s ease text-decoration-color;
+
+  &:hover {
+    text-decoration-color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background-color: $green;
+  color: $white;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: ' ';
+    display: block;
+  }
+}

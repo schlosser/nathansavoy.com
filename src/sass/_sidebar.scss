@@ -1,0 +1,81 @@
+nav {
+  padding: 3rem;
+
+  h1 {
+    white-space: nowrap;
+
+    a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      margin: 0 1rem 0.75rem 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  ul li a {
+    @extend %h4;
+    color: $black;
+    text-decoration: none;
+    transition: 0.2s ease color;
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+.page-work .work, .page-collaborators .collaborators {
+  color: $green;
+}
+
+
+@media screen and (max-width: $tablet-landscape-max) {
+  nav {
+    display: flex;
+    align-items: center;
+
+    .photo {
+      width: 12rem;
+      margin-right: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: $phone-portrait-max) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+
+    .photo {
+      width: 100%;
+    }
+
+    .text {
+      width: 100%;
+    }
+
+    ul {
+      justify-content: flex-start;
+
+      li {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

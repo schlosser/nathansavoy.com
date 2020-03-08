@@ -1,0 +1,42 @@
+$text-content-width: 45rem;
+$content-width: 60rem;
+$content-padding: 1.5rem;
+
+section {
+  padding: 4rem 0;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+
+  .main {
+    padding: 3rem;
+    flex: 1;
+    max-width: $content-width;
+  }
+
+  .sidebar {
+    flex: 0;
+  }
+}
+
+.content {
+  @include clearfix;
+  margin: 0 auto;
+  max-width: $content-width;
+  padding: 0 $content-padding;
+  width: 100%;
+}
+
+@media screen and (max-width: $tablet-landscape-max) {
+  body {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: $phone-landscape-max) {
+  body .main {
+    padding: 1.5rem;
+  }
+}
