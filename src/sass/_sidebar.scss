@@ -1,3 +1,10 @@
+.sidebar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
 nav {
   padding: 3rem;
 
@@ -33,16 +40,16 @@ nav {
       transition: 0.2s ease color;
 
       &:hover {
-        color: $green;
+        color: $blue;
       }
     }
   }
 }
 
-.page-work .work, .page-collaborators .collaborators {
-  color: $green;
+.page-work .work,
+.page-collaborators .collaborators {
+  color: $blue;
 }
-
 
 @media screen and (max-width: $tablet-landscape-max) {
   nav {
@@ -56,9 +63,28 @@ nav {
   }
 }
 
-@media screen and (max-width: $phone-portrait-max) {
+.flag {
+  background-color: $flag-tan;
+  border-left: 0.5rem solid $flag-orange;
+  border-right: 0.5rem solid $flag-red;
+  display: block;
+  height: 0.9rem;
+  margin: 6rem auto 0;
+  width: 1.5rem;
+}
+
+@media screen and (max-width: $tablet-portrait-max) {
   nav {
     align-items: flex-start;
+
+    ul {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: $phone-portrait-max) {
+  nav {
     flex-direction: column;
     padding: 1.5rem;
 
@@ -69,10 +95,6 @@ nav {
 
     .text {
       width: 100%;
-    }
-
-    ul {
-      justify-content: flex-start;
     }
 
     li {

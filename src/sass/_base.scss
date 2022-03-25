@@ -1,5 +1,6 @@
-html, body {
-  background-color: $light-green;
+html,
+body {
+  background-color: $light-blue;
   color: $black;
   font-family: $sans;
   font-size: 16px;
@@ -8,7 +9,9 @@ html, body {
   position: relative;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   -webkit-tap-highlight-color: $transparent;
 }
@@ -23,19 +26,23 @@ a {
   }
 }
 
+em {
+  font-style: italic;
+}
+
 img {
   max-width: 100%;
 }
 
 ::selection {
-  background-color: $green;
+  background-color: $blue;
   color: $white;
 }
 
 @mixin clearfix {
   &::after {
     clear: both;
-    content: ' ';
+    content: " ";
     display: block;
   }
 }

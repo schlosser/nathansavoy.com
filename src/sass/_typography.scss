@@ -6,16 +6,20 @@ $medium: 500;
 $regular: 400;
 $light: 300;
 
-$sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$serif: 'Playfair Display', Georgia, serif;
+$sans: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif: "Playfair Display", Georgia, serif;
 
-h1, %h1 {
+h1,
+%h1 {
   font-family: $serif;
   font-size: 3rem;
   font-weight: $medium;
 }
 
-h2, %h2, p, ul li {
+h2,
+%h2,
+p,
+ul li {
   font-family: $serif;
   font-size: 2rem;
   font-weight: $medium;
@@ -23,18 +27,19 @@ h2, %h2, p, ul li {
   margin-bottom: 2rem;
 
   a {
-    color: $green;
+    color: $blue;
     text-decoration: underline;
     text-decoration-color: $transparent;
     transition: 0.2s ease text-decoration-color;
 
     &:hover {
-      text-decoration-color: $green;
+      text-decoration-color: $blue;
     }
   }
 }
 
-h3, %h3 {
+h3,
+%h3 {
   color: $blue;
   font-family: $serif;
   font-size: 2rem;
@@ -42,19 +47,22 @@ h3, %h3 {
   margin-bottom: 1.5rem;
 }
 
-h4, %h4 {
+h4,
+%h4 {
   font-family: $sans;
   font-size: 1rem;
   font-weight: $semi-bold;
 }
 
-h5, %h5 {
+h5,
+%h5 {
   font-family: $sans;
   font-size: 1rem;
   font-weight: $semi-bold;
 }
 
-h6, %h6 {
+h6,
+%h6 {
   color: $dark-gray;
   font-family: $sans;
   font-size: 0.65rem;
@@ -67,18 +75,33 @@ strong {
   font-weight: $bold;
 }
 
+@media screen and (max-width: $tablet-portrait-max) and (min-width: $phone-landscape-max) {
+  h2,
+  %h2,
+  p,
+  ul li {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
 @media screen and (max-width: $phone-landscape-max) {
-  h1, %h1 {
+  h1,
+  %h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
 
-  h2, %h2, p, ul li {
+  h2,
+  %h2,
+  p,
+  ul li {
     font-size: 1.25rem;
     margin-bottom: 1rem;
   }
 
-  h4, %h4 {
+  h4,
+  %h4 {
     font-size: 0.875rem;
   }
 }
