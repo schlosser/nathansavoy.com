@@ -12,13 +12,9 @@ nav {
     white-space: nowrap;
 
     a {
-      color: $black;
+      color: $white;
       text-decoration: none;
     }
-  }
-
-  img {
-    border-radius: 0.5rem;
   }
 
   ul {
@@ -35,12 +31,15 @@ nav {
 
     a {
       @extend %h4;
-      color: $black;
-      text-decoration: none;
-      transition: 0.2s ease color;
+      color: $white;
+      transition: 0.2s ease text-decoration-color;
+      text-decoration: underline;
+      text-decoration-color: transparent;
 
       &:hover {
-        color: $blue;
+        color: $white;
+        text-decoration: underline;
+        text-decoration-color: white;
       }
     }
   }
@@ -48,18 +47,13 @@ nav {
 
 .page-work .work,
 .page-collaborators .collaborators {
-  color: $blue;
+  color: $green;
 }
 
 @media screen and (max-width: $tablet-landscape-max) {
   nav {
     align-items: center;
     display: flex;
-
-    .photo {
-      margin-right: 3rem;
-      width: 12rem;
-    }
   }
 }
 
@@ -73,6 +67,19 @@ nav {
   width: 1.5rem;
 }
 
+.photo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  max-width: 30rem;
+  z-index: 1;
+
+  img {
+    display: block;
+  }
+}
+
 @media screen and (max-width: $tablet-portrait-max) {
   nav {
     align-items: flex-start;
@@ -83,15 +90,16 @@ nav {
   }
 }
 
+@media screen and (max-width: $phone-landscape-max) {
+  .photo {
+    position: relative;
+    display: block;
+  }
+}
 @media screen and (max-width: $phone-portrait-max) {
   nav {
     flex-direction: column;
     padding: 1.5rem;
-
-    .photo {
-      width: 100%;
-      margin-bottom: 1rem;
-    }
 
     .text {
       width: 100%;

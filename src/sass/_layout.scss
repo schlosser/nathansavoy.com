@@ -12,6 +12,8 @@ body {
   align-items: stretch;
 
   .main {
+    z-index: 10;
+    position: relative;
     padding: 3rem;
     flex: 1;
     max-width: $content-width;
@@ -32,6 +34,8 @@ body {
   max-width: $content-width;
   padding: 0 $content-padding;
   width: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 @media screen and (max-width: $tablet-portrait-max) {

@@ -25,17 +25,6 @@ ul li {
   font-weight: $medium;
   line-height: 1.5;
   margin-bottom: 2rem;
-
-  a {
-    color: $blue;
-    text-decoration: underline;
-    text-decoration-color: $transparent;
-    transition: 0.2s ease text-decoration-color;
-
-    &:hover {
-      text-decoration-color: $blue;
-    }
-  }
 }
 
 h3,
@@ -63,7 +52,7 @@ h5,
 
 h6,
 %h6 {
-  color: $dark-gray;
+  color: $green;
   font-family: $sans;
   font-size: 0.65rem;
   font-weight: $semi-bold;
